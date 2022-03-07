@@ -7,13 +7,13 @@ class KaspiSpider(scrapy.Spider):
         urls = [
             'https://kaspi.kz/shop/c/categories/',        ]
         for url in urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+            yield scrapy.Request(url=url, callback=self.parse,  meta={"playwright": True})
 
     def parse(self, response):
         # get all links from response
         links = response.css('a::attr(href)').extract()
 
-        self.log('123412341234123412341234123412341234')
+        #self.log('123412341234123412341234123412341234')
         for link in links:
             if link.startswith('/shop/c/categories/'):
                 self.log(f'link {link}')
