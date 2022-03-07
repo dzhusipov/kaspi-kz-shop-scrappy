@@ -12,10 +12,21 @@ BOT_NAME = 'kaspi_kz_scrappy'
 SPIDER_MODULES = ['kaspi_kz_scrappy.spiders']
 NEWSPIDER_MODULE = 'kaspi_kz_scrappy.spiders'
 
-DOWNLOAD_HANDLERS = {
-    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
-}
+
+# Думал нужен JS движок - а хер там плавал. Зря докер образ собирал
+#SPLASH_URL = 'http://localhost:8050'
+#DOWNLOADER_MIDDLEWARES = {
+#    'scrapy_splash.SplashCookiesMiddleware': 723,
+#    'scrapy_splash.SplashMiddleware': 725,
+#    'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware': 810,
+#}
+#SPIDER_MIDDLEWARES = {
+#    'scrapy_splash.SplashDeduplicateArgsMiddleware': 100,
+#}
+#DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
+#HTTPCACHE_STORAGE = 'scrapy_splash.SplashAwareFSCacheStorage'
+
+
 
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 

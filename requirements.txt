@@ -29,6 +29,7 @@ requests==2.27.1
 requests-file==1.5.1
 Scrapy==2.6.1
 scrapy-playwright==0.0.10
+scrapy-splash==0.8.0
 service-identity==21.1.0
 six==1.16.0
 tldextract==3.2.0
