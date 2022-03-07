@@ -1,4 +1,4 @@
-# kaspi-kz-shop-scrappy
+# Kaspi.kz парсинг данных из магазина
 
 pip instal -r requirements.txt  
 scrapy crawl kaspi  
